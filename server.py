@@ -21,8 +21,8 @@ app.add_middleware(
 )
 
 # Supabase setup
-SUPABASE_URL = os.getenv("https://jprjnqyjicyvgftkkrou.supabase.co")
-SUPABASE_KEY = os.getenv("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpwcmpucXlqaWN5dmdmdGtrcm91Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDYwMjYxNzIsImV4cCI6MjA2MTYwMjE3Mn0.CK0sgXbWD2unY-dggd7mwT0DRHKZoyCnfzqxVgaB2O0")
+SUPABASE_URL = os.getenv("SUPABASE_URL", "https://jprjnqyjicyvgftkkrou.supabase.co")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpwcmpucXlqaWN5dmdmdGtrcm91Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDYwMjYxNzIsImV4cCI6MjA2MTYwMjE3Mn0.CK0sgXbWD2unY-dggd7mwT0DRHKZoyCnfzqxVgaB2O0")
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # Store active WebSocket connections
